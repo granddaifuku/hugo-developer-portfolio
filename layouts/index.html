@@ -168,7 +168,8 @@
             {{ range .Site.Data.homepage.skill.item }}
             <div class="imagemargin">
                 <img class="contain skills" src="{{.logo}}" alt="{{.company}}" loading="lazy" style="cursor: pointer"
-                    uk-toggle="target: #{{ replace (replace .title " " "_") "." "_" }}">
+                     uk-toggle="target: #{{ replace (replace .title " " "_") "." "_" }}">
+				<p>{{.credit}</p>
                 <h4>{{.title }}</h4>
             </div>
             {{ end }}
@@ -218,7 +219,8 @@
             <div>
                 <div class="uk-card uk-card-default uk-height-large">
                     <div class="uk-card-media-top">
-                        <img class="contain experience" src="{{.logo}}" alt="" style="padding: 20px" loading="lazy">
+                      <img class="contain experience" src="{{.logo}}" alt="" style="padding: 20px" loading="lazy">
+					  <p>{{.credit}</p>
                     </div>
                     <div class="uk-card-body" style="padding: initial">
                         <div style="height: 5em">
